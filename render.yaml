@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: health-management-demo
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: AI_API_KEY
+        sync: false
+      - key: AI_BASE_URL
+        value: https://ark.cn-beijing.volces.com/api
+      - key: AI_MODEL
+        value: doubao-seed-1-8-251228
